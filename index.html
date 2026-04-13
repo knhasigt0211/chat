@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>がん情報共生ポータル | 正しい知識と確かな支えを</title>
+    <style>
+        :root {
+            --primary: #00529b; /* 信頼のブルー */
+            --secondary: #6fb048; /* 安心のグリーン */
+            --accent: #f39800; /* 温かみのオレンジ */
+            --light-bg: #f0f7ff;
+            --text: #333;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0;
+            background-color: #fff;
+        }
+
+        /* ヘッダー */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #fff;
+            border-bottom: 2px solid var(--light-bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(rgba(0,82,155,0.05), rgba(0,82,155,0.05)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80'); /* イメージ画像（仮） */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 4つの入り口（エコシステム） */
+        .entry-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 0 5%;
+        }
+
+        .entry-card {
+            background: #fff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .entry-card:hover { transform: translateY(-10px); background: var(--primary); color: #fff; }
+        .entry-card i { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+        /* コンテンツセクション */
+        .section { padding: 60px 5%; max-width: 1000px; margin: 0 auto; }
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .info-box {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* フッター */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 5% 20px;
+            text-align: center;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🍀 がん情報共生ポータル</div>
+    <nav class="nav-links">
+        <a href="#">ホーム</a>
+        <a href="#">サイトについて</a>
+        <a href="#">お問い合わせ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>正しい知識と、確かな支えを。</h1>
+        <p>がんと診断された方、そのご家族、そして支えるすべての人へ。<br>私たちは、情報の力で「生きる」を支える循環をつくります。</p>
+        <a href="#" class="btn-main">ポータルサイトを見る</a>
+    </div>
+</section>
+
+<div class="entry-points">
+    <a href="#" class="entry-card">
+        <strong>患者・ご家族</strong>
+        <p>治療や生活の知恵</p>
+    </a>
+    <a href="#" class="entry-card">
+        <strong>医療関係者</strong>
+        <p>専門的な連携と情報</p>
+    </a>
+    <a href="#" class="entry-card">
+        <strong>一般・企業</strong>
+        <p>予防と両立支援</p>
+    </a>
+    <a href="#" class="entry-card">
+        <strong>相談窓口</strong>
+        <p>一人で悩まないために</p>
+    </a>
+</div>
+
+<section class="section">
+    <h2 class="section-title">このサイトでできること</h2>
+    <div class="grid">
+        <div class="info-box">
+            <h3>🔍 信頼できる情報の検索</h3>
+            <p>公的機関や専門医が監修した、科学的根拠に基づく最新の治療情報を分かりやすくお届けします。</p>
+        </div>
+        <div class="info-box">
+            <h3>💰 お金と仕事の相談</h3>
+            <p>治療費の助成制度や、仕事を続けながら治療を受けるための両立支援情報をまとめています。</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 がん情報ポータル紹介サイト - 社会全体で支え合うエコシステムを目指して</p>
+</footer>
+
+
+ }
+</script>
+<script
+ src="https://udify.app/embed.min.js"
+ id="ganZ0MUAHCczhe0Y"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background-color: #1C64F2 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
+</style>
+
+</footer>
+
+
+
+</body>
